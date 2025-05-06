@@ -1,4 +1,4 @@
-import { Button } from "@dlvlabs/ui/button";
+import { Button } from "@dlvlabs/ui";
 import Image, { type ImageProps } from "next/image";
 import styles from "./page.module.css";
 
@@ -18,7 +18,7 @@ const ThemeImage = (props: Props) => {
   );
 };
 
-export default function Home() {
+export function MainPage() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
