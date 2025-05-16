@@ -40,3 +40,32 @@ yarn-error.log*
 
 # yarn
 .yarn/install-state.gz
+
+# Added by Claude Task Master
+# Logs
+logs
+*.log
+dev-debug.log
+# Dependency directories
+node_modules/
+# Environment variables
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# OS specific
+# Task files
+tasks.json
+tasks/ 
+scripts/
+.cursor/
+.roo/
+
+# Added by Windsurf
+.windsurfrules
+.roomodes
+.taskmasterconfig

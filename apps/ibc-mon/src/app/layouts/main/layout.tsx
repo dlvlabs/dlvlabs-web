@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import { Header } from "@dlvlabs/ui";
+
 import "../../styles/index.css";
 
 export const metadata: Metadata = {
@@ -15,7 +17,14 @@ export function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main>{children}</main>
+        <main>
+          <div className="min-w-screen min-h-screen flex flex-col ">
+            <Header />
+            <div className="flex-1 flex flex-col items-center justify-center">
+              {children}
+            </div>
+          </div>
+        </main>
       </body>
     </html>
   );

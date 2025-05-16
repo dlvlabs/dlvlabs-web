@@ -1,21 +1,26 @@
-import { tcm } from "@dlvlabs/ui";
 import Link from "next/link";
+import { ButtonHTMLAttributes } from "react";
+import { tcm } from "../../../libs/tailwind-class-merge";
 
-interface LinkButtonProps {
+interface NavigationLinkProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   href: string;
   children: React.ReactNode;
   buttonClassName?: string;
   spanClassName?: string;
 }
 
-export const LinkButton: React.FC<LinkButtonProps> = ({
+export const NavigationLink: React.FC<NavigationLinkProps> = ({
   href,
   children,
   buttonClassName,
   spanClassName,
+  disabled,
+  ...props
 }) => {
   return (
     <button
+      {...props}
+      disabled={disabled}
       className={tcm(
         "btn group flex items-center bg-transparent tracking-widest font-medium justify-start",
         buttonClassName,
@@ -29,7 +34,7 @@ export const LinkButton: React.FC<LinkButtonProps> = ({
       >
         <Link
           href={href}
-          className={`text-slate-500 hover:text-slate-600 dark:hover:text-slate-400`}
+          className={`text-slate-700 hover:text-slate-500 dark:hover:text-slate-400`}
         >
           {children}
         </Link>

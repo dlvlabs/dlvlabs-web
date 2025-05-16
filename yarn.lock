@@ -76,12 +76,14 @@ __metadata:
     "@types/node": "npm:^22.14.0"
     "@types/react": "npm:19.1.0"
     "@types/react-dom": "npm:19.1.1"
+    autoprefixer: "npm:^10.4.14"
     clsx: "npm:^2.1.1"
     eslint: "npm:^9.25.0"
+    postcss: "npm:^8.4.27"
     react: "npm:^19.1.0"
     react-dom: "npm:^19.1.0"
     tailwind-merge: "npm:^3.2.0"
-    tailwindcss: "npm:^4.1.5"
+    tailwindcss: "npm:^3.3.0"
     typescript: "npm:5.8.2"
   languageName: unknown
   linkType: soft
@@ -5364,13 +5366,6 @@ __metadata:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
   checksum: 10c0/cc42c6e7fdf88a5507a0d7fea37f1b4122bec158977f8c017b2ae6828741f9e6f8cb90282c6bf2bd5951fd1220a53e0a50ca58f5c1c00eb7f5d9f8b80dc4523c
-  languageName: node
-  linkType: hard
-
-"tailwindcss@npm:^4.1.5":
-  version: 4.1.5
-  resolution: "tailwindcss@npm:4.1.5"
-  checksum: 10c0/19fd0709f8c8d706d28a936f6ae7ad371d8586ea38e17a68ab5ba1c1c5d97ffcc8eba144f1b5c91c1534aa8df053a26c298863272a3357161a1dd9849b89339c
   languageName: node
   linkType: hard
 
