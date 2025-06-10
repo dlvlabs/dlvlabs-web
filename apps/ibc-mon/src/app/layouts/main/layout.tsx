@@ -18,7 +18,7 @@ export function RootLayout({
     <html lang="en">
       <body>
         <main>
-          <div className="min-w-screen min-h-screen flex flex-col ">
+          <div className="min-w-screen min-h-screen flex flex-col items-center justify-center">
             <Header />
             <div className="flex-1 flex flex-col items-center justify-center">
               {children}
