@@ -1,31 +1,28 @@
-import { tcm } from "@dlvlabs/ui";
+import { formatChainName } from "@/shared/utils";
+import { ConnectionCard } from "@/widgets/connection-card";
 import Image from "next/image";
-import Link from "next/link";
-import { ChainCard } from "../../entities/chain/ui/chain-card";
 import { BasicChainType, StatusType } from "../../shared/types";
-import { CardButton } from "../../shared/ui/card-button";
 import { ContentContainer } from "../../shared/ui/content-container";
 import { Divider } from "../../shared/ui/divider";
-import { Indicator } from "../../shared/ui/indicator";
 
 const CONNECTED_CHAINS = [
   {
     name: "cosmos-hub",
     logo: "/images/cosmos.png",
     chainId: "cosmoshub-4",
-    status: "normal",
+    status: "ACTIVE",
   },
   {
     name: "osmosis",
     logo: "/images/osmosis.png",
     chainId: "osmosis-1",
-    status: "warning",
+    status: "WARNING",
   },
   {
     name: "milky-way",
     logo: "/images/milkyway.png",
     chainId: "milkyway-1",
-    status: "error",
+    status: "ERROR",
   },
 ];
 
@@ -43,31 +40,25 @@ export const ChainPage = ({ chain }: { chain: BasicChainType }) => {
               className="rounded-full"
             />
             <h3 className="text-xl leading-6 font-medium text-gray-900">
-              {chain.name
-                .split("-")
-                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                .join(" ")}
+              {formatChainName(chain.name)}
             </h3>
           </div>
           <p className=" max-w-2xl text-sm text-gray-500">
-            Total Connected Chains: 4
+            Total Connected Chains: {CONNECTED_CHAINS.length}
           </p>
         </div>
         <Divider />
         <div className="w-full min-h-[66vh] h-full px-12 py-5 border-b">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {CONNECTED_CHAINS.map((connectedChain) => (
-              <CardButton
+              <ConnectionCard
                 key={connectedChain.chainId}
-                className={tcm("w-full h-24")}
-                component={Link}
-                href={`/${chain.name}/${connectedChain.name}`}>
-                <Indicator status={connectedChain.status as StatusType} />
-                <ChainCard
-                  chainName={connectedChain.name}
-                  logoUrl={connectedChain.logo}
-                />
-              </CardButton>
+                chainName={chain.name}
+                logoUrl={connectedChain.logo}
+                connectionChainName={connectedChain.name}
+                connectionId={connectedChain.chainId}
+                status={connectedChain.status as StatusType}
+              />
             ))}
           </div>
         </div>

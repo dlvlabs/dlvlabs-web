@@ -21,7 +21,6 @@ export function MainPage() {
             key={chain.id}
             chainName={chain.name}
             logoUrl={chain.logo}
-            status={null}
           />
         ))}
       </div>
