@@ -1,1 +1,1 @@
-export { MainPage } from "./MainPage";
+export { MainChainListPage } from "./MainChainListPage";

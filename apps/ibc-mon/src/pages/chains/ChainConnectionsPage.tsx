@@ -26,7 +26,7 @@ const CONNECTED_CHAINS = [
   },
 ];
 
-export const ChainPage = ({ chain }: { chain: BasicChainType }) => {
+export const ChainConnectionsPage = ({ chain }: { chain: BasicChainType }) => {
   return (
     <div className="w-full h-full flex-1 flex flex-col items-center justify-center">
       <ContentContainer>
@@ -55,6 +55,7 @@ export const ChainPage = ({ chain }: { chain: BasicChainType }) => {
                 key={connectedChain.chainId}
                 chainName={chain.name}
                 logoUrl={connectedChain.logo}
+                chainId={chain.chainId}
                 connectionChainName={connectedChain.name}
                 connectionId={connectedChain.chainId}
                 status={connectedChain.status as StatusType}

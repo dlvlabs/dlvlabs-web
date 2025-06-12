@@ -1,1 +1,1 @@
-export { MainPage as default } from "../src/pages/main";
+export { MainChainListPage as default } from "@/pages/main";

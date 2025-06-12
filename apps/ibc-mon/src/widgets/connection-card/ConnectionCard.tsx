@@ -7,6 +7,7 @@ import Link from "next/link";
 interface ConnectionCardProps {
   chainName: string;
   logoUrl: string;
+  chainId: string;
   connectionId: string;
   connectionChainName: string;
   status: StatusType;
@@ -15,12 +16,13 @@ interface ConnectionCardProps {
 export const ConnectionCard = ({
   chainName,
   logoUrl,
+  chainId,
   connectionId,
   connectionChainName,
   status,
 }: ConnectionCardProps) => {
   return (
-    <Link href={`/${chainName}/${connectionChainName}`}>
+    <Link href={`/chains/${chainId}/connections/${connectionId}`}>
       <div className="w-full font-[Arial] p-4 cursor-pointer rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 relative group">
         <Indicator status={status} />
         <div className="w-full flex items-center gap-4 py-2">

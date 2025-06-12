@@ -1,7 +1,7 @@
 import { CHAIN_LIST } from "../../shared/consts";
 import { ChainButton } from "../../widgets/chain-button";
 
-export function MainPage() {
+export function MainChainListPage() {
   return (
     <div className="w-full h-full flex-1 flex flex-col items-center justify-center gap-24">
       <div className="flex flex-col items-center gap-4">
@@ -18,6 +18,7 @@ export function MainPage() {
         {CHAIN_LIST.map((chain) => (
           <ChainButton
             className="w-72"
+            chainId={chain.chainId}
             key={chain.id}
             chainName={chain.name}
             logoUrl={chain.logo}

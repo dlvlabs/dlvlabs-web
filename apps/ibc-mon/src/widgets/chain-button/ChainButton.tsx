@@ -5,19 +5,21 @@ import { CardButton } from "../../shared/ui/card-button";
 interface ChainButtonProps {
   chainName: string;
   logoUrl: string;
+  chainId: string;
   className?: string;
 }
 
 export const ChainButton = ({
   chainName,
   logoUrl,
+  chainId,
   className,
 }: ChainButtonProps) => {
   return (
     <CardButton
       className={tcm("w-full h-24", className)}
       component={Link}
-      href={`/${chainName}`}>
+      href={`/chains/${chainId}`}>
       <ChainCard chainName={chainName} logoUrl={logoUrl} />
     </CardButton>
   );
