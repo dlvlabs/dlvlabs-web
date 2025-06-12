@@ -1,9 +1,9 @@
+import { BasicChainType, StatusType } from "@/shared/types";
+import { ContentContainer } from "@/shared/ui/content-container";
+import { Divider } from "@/shared/ui/divider";
 import { formatChainName } from "@/shared/utils";
 import { ConnectionCard } from "@/widgets/connection-card";
 import Image from "next/image";
-import { BasicChainType, StatusType } from "../../shared/types";
-import { ContentContainer } from "../../shared/ui/content-container";
-import { Divider } from "../../shared/ui/divider";
 
 const CONNECTED_CHAINS = [
   {
