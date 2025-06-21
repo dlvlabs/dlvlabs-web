@@ -31,7 +31,7 @@ export const Connection = ({ status, ...props }: ConnectionProps) => {
 
   return (
     <div
-      className="relative flex items-center justify-center w-32 mx-2"
+      className="relative flex items-center justify-center w-full"
       {...props}>
       <div
         className={`absolute w-full h-1 rounded-full shadow-lg ${colorClasses.line}`}></div>

@@ -1,9 +1,8 @@
 import { CHAIN_LIST } from "@/shared/consts";
 import { ContentContainer } from "@/shared/ui/content-container";
-import Image from "next/image";
+import { ChainIdentifier } from "../../entities/chain/ui/chain-identifier";
 import { Divider } from "../../shared/ui/divider";
 import { DataFlowIcon } from "../../shared/ui/icons";
-import { formatChainName } from "../../shared/utils";
 import { ChainConnectionDetailCard } from "../../widgets/connection-detail-card";
 
 interface ChainConnectionDetailPageProps {
@@ -25,32 +24,18 @@ export const ChainConnectionDetailPage = ({
   return (
     <div className="w-full h-full flex-1 flex flex-col items-center justify-center py-12 mx-auto">
       <ContentContainer>
-        <div className="w-full px-6 py-3 flex items-center gap-x-2">
-          <div className="flex items-center gap-2 py-2 rounded ">
-            <Image
-              src={currentChain.logo}
-              alt={currentChain.name}
-              width={24}
-              height={24}
-              className="rounded-full"
-            />
-            <h3 className="text-xl leading-6 font-medium text-gray-900">
-              {formatChainName(currentChain.name)}
-            </h3>
-          </div>
+        <div className="w-full px-6 py-3 flex items-center gap-x-4">
+          <ChainIdentifier
+            chainName={currentChain.name}
+            logoUrl={currentChain.logo}
+            chainId={currentChain.chainId}
+          />
           <DataFlowIcon />
-          <div className="flex items-center gap-2 py-2 ">
-            <Image
-              src={peerChain.logo}
-              alt={peerChain.name}
-              width={24}
-              height={24}
-              className="rounded-full"
-            />
-            <h3 className="text-xl leading-6 font-medium text-gray-900">
-              {formatChainName(peerChain.name)}
-            </h3>
-          </div>
+          <ChainIdentifier
+            chainName={peerChain.name}
+            logoUrl={peerChain.logo}
+            chainId={peerChain.chainId}
+          />
         </div>
         <Divider />
         <div className="w-full min-h-[66vh] h-full px-4 py-5 border-b">

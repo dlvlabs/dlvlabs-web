@@ -1,9 +1,8 @@
 import { BasicChainType, StatusType } from "@/shared/types";
 import { ContentContainer } from "@/shared/ui/content-container";
 import { Divider } from "@/shared/ui/divider";
-import { formatChainName } from "@/shared/utils";
 import { ConnectionCard } from "@/widgets/connection-card";
-import Image from "next/image";
+import { ChainIdentifier } from "../../entities/chain/ui/chain-identifier";
 
 const CONNECTED_CHAINS = [
   {
@@ -31,7 +30,12 @@ export const ChainConnectionsPage = ({ chain }: { chain: BasicChainType }) => {
     <div className="w-full h-full flex-1 flex flex-col items-center justify-center">
       <ContentContainer>
         <div className="w-full px-8 py-3 flex justify-between items-end">
-          <div className="flex items-center gap-2 py-2">
+          <ChainIdentifier
+            chainName={chain.name}
+            logoUrl={chain.logo}
+            chainId={chain.chainId}
+          />
+          {/* <div className="flex items-center gap-2 py-2">
             <Image
               src={chain.logo}
               alt={chain.name}
@@ -42,7 +46,7 @@ export const ChainConnectionsPage = ({ chain }: { chain: BasicChainType }) => {
             <h3 className="text-xl leading-6 font-medium text-gray-900">
               {formatChainName(chain.name)}
             </h3>
-          </div>
+          </div> */}
           <p className=" max-w-2xl text-sm text-gray-500">
             Total Connected Chains: {CONNECTED_CHAINS.length}
           </p>

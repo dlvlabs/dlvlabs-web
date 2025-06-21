@@ -1,7 +1,7 @@
+import { ChainIdentifier } from "@/entities/chain/ui/chain-identifier";
+import { CardButton } from "@/shared/ui/card-button";
 import { tcm } from "@dlvlabs/ui";
 import Link from "next/link";
-import { ChainCard } from "../../entities/chain/ui/chain-card";
-import { CardButton } from "../../shared/ui/card-button";
 interface ChainButtonProps {
   chainName: string;
   logoUrl: string;
@@ -20,7 +20,7 @@ export const ChainButton = ({
       className={tcm("w-full h-24", className)}
       component={Link}
       href={`/chains/${chainId}`}>
-      <ChainCard chainName={chainName} logoUrl={logoUrl} />
+      <ChainIdentifier chainName={chainName} logoUrl={logoUrl} />
     </CardButton>
   );
 };
