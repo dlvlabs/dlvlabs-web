@@ -1,6 +1,6 @@
-import { ChainButton } from "@/widgets/home/chain-button";
-import { IntroSection } from "@/widgets/home/intro-section";
 import { CHAIN_LIST } from "@/shared/consts";
+import { ChainNavigationCard } from "@/widgets/home/chain-navigation-card";
+import { IntroSection } from "@/widgets/home/intro-section";
 
 export function HomePage() {
   return (
@@ -8,7 +8,7 @@ export function HomePage() {
       <IntroSection />
       <div className="flex gap-20">
         {CHAIN_LIST.map((chain) => (
-          <ChainButton
+          <ChainNavigationCard
             className="w-72"
             chainId={chain.chainId}
             key={chain.id}

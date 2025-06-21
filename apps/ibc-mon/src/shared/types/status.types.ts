@@ -1,1 +1,1 @@
-export type StatusType = "ACTIVE" | "WARNING" | "ERROR" | null;
+export type StatusType = "ACTIVE" | "WARNING" | "ERROR";

@@ -1,6 +1,6 @@
 import { BasicChainType, StatusType } from "@/shared/types";
-import { ContentContainer } from "@/shared/ui/content-container";
 import { Divider } from "@/shared/ui/divider";
+import { PageCard } from "@/shared/ui/page-card";
 import { ConnectionCard } from "@/widgets/connection-card";
 import { ChainIdentifier } from "../../entities/chain/ui/chain-identifier";
 
@@ -28,7 +28,7 @@ const CONNECTED_CHAINS = [
 export const ChainConnectionsPage = ({ chain }: { chain: BasicChainType }) => {
   return (
     <div className="w-full h-full flex-1 flex flex-col items-center justify-center">
-      <ContentContainer>
+      <PageCard>
         <div className="w-full px-8 py-3 flex justify-between items-end">
           <ChainIdentifier
             chainName={chain.name}
@@ -67,7 +67,7 @@ export const ChainConnectionsPage = ({ chain }: { chain: BasicChainType }) => {
             ))}
           </div>
         </div>
-      </ContentContainer>
+      </PageCard>
     </div>
   );
 };

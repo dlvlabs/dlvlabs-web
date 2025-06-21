@@ -1,7 +1,7 @@
 import { tcm } from "@dlvlabs/ui";
 import { StatusType } from "../../types";
 
-const STATUS_INDICATOR = {
+const STATUS_INDICATOR_STYLES = {
   ACTIVE: {
     ping: "bg-emerald-400 opacity-75",
     dot: "bg-emerald-500",
@@ -16,25 +16,22 @@ const STATUS_INDICATOR = {
   },
 };
 
-interface IndicatorProps {
+interface StatusIndicatorProps {
   status: StatusType;
 }
-export const Indicator = ({ status }: IndicatorProps) => {
-  if (!status) {
-    return null;
-  }
+export const StatusIndicator = ({ status }: StatusIndicatorProps) => {
   return (
     <div className="absolute top-2 right-2 flex size-3 z-10">
       <span
         className={tcm(
           `absolute inline-flex h-full w-full animate-slow-ping rounded-full`,
-          STATUS_INDICATOR[status].ping
+          STATUS_INDICATOR_STYLES[status].ping
         )}
       />
       <span
         className={tcm(
           `relative inline-flex size-3 rounded-full`,
-          STATUS_INDICATOR[status].dot
+          STATUS_INDICATOR_STYLES[status].dot
         )}
       />
     </div>

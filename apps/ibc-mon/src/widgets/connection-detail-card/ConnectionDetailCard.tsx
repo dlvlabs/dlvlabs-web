@@ -2,7 +2,7 @@ import { tcm } from "@dlvlabs/ui";
 import { HTMLAttributes } from "react";
 import { ChainIdentifier } from "../../entities/chain/ui/chain-identifier";
 import { BasicChainType } from "../../shared/types";
-import { Connection } from "../../shared/ui/connection";
+import { ConnectionStatusBar } from "../../shared/ui/connection-status-bar";
 
 interface ChainConnectionDetailCardProps
   extends HTMLAttributes<HTMLDivElement> {
@@ -38,7 +38,7 @@ export const ChainConnectionDetailCard = ({
             size="S"
           />
         </div>
-        <Connection status={status} />
+        <ConnectionStatusBar status={status} />
         <div className="flex-none">
           <ChainIdentifier
             chainName={peerChain.name}

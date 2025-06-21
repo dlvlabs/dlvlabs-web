@@ -1,6 +1,6 @@
 import { tcm } from "@dlvlabs/ui";
 
-export const ContentContainer = ({
+export const PageCard = ({
   children,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => {
