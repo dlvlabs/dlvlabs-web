@@ -25,7 +25,7 @@ export const ConnectionCard = ({
     <Link href={`/chains/${chainId}/connections/${connectionId}`}>
       <div className="w-full font-[Arial] p-4 cursor-pointer rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 relative group">
         <Indicator status={status} />
-        <div className="w-full flex items-center gap-4 py-2">
+        <div className="w-full flex items-center gap-2 py-2">
           <Image
             src={logoUrl}
             alt={chainName}
@@ -40,12 +40,6 @@ export const ConnectionCard = ({
             <p className="text-slate-600 text-xs">ChainId: {connectionId}</p>
           </div>
         </div>
-        <p className="text-slate-600 text-sm ">
-          Client ID: {connectionId} {/* TODO: Add Client description */}
-        </p>
-        <p className="text-slate-600 text-sm mb-2">
-          Channel ID: {connectionId} {/* TODO: Add Channel description */}
-        </p>
 
         <div className="absolute bg-slate-700 p-2 rounded-tl-xl rounded-br-xl bottom-0 right-0 transition-colors duration-200 flex justify-center items-center group-hover:bg-slate-900">
           <svg

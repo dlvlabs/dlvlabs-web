@@ -5,7 +5,7 @@ export const DataFlowIcon = ({
   ...props
 }: React.SVGAttributes<SVGSVGElement>) => (
   <svg
-    className={tcm("w-8 h-8 text-teal-500", className)}
+    className={tcm("w-8 h-8 text-slate-500", className)}
     viewBox="0 0 32 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
