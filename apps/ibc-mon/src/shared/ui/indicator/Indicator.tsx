@@ -27,7 +27,7 @@ export const Indicator = ({ status }: IndicatorProps) => {
     <div className="absolute top-2 right-2 flex size-3 z-10">
       <span
         className={tcm(
-          `absolute inline-flex h-full w-full animate-ping rounded-full`,
+          `absolute inline-flex h-full w-full animate-slow-ping rounded-full`,
           STATUS_INDICATOR[status].ping
         )}
       />
