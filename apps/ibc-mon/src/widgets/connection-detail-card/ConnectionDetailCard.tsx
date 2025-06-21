@@ -113,7 +113,7 @@ export const ChainConnectionDetailCard = ({
               <td className="py-3 pr-8 font-medium text-gray-700 whitespace-nowrap">
                 Status
               </td>
-              <td className="py-3 pl-4 text-[#7e8882]">Active</td>
+              <td className="py-3 pl-4 text-[#7e8882]">{status}</td>
             </tr>
             <tr>
               <td className="py-3 pr-8 font-medium text-gray-700 whitespace-nowrap align-top">

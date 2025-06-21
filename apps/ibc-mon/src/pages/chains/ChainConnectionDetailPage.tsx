@@ -23,7 +23,7 @@ export const ChainConnectionDetailPage = ({
   }
 
   return (
-    <div className="w-full h-full flex-1 flex flex-col items-center justify-center py-12">
+    <div className="w-full h-full flex-1 flex flex-col items-center justify-center py-12 mx-auto">
       <ContentContainer>
         <div className="w-full px-6 py-3 flex items-center gap-x-2">
           <div className="flex items-center gap-2 py-2 rounded ">
