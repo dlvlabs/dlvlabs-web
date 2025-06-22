@@ -1,2 +1,2 @@
-export { ChainConnectionDetailPage } from "./ChainConnectionDetailPage";
-export { ChainConnectionsPage } from "./ChainConnectionsPage";
+export { ChainConnectionListPage } from "./ChainConnectionListPage";
+export { ChainConnectionStatusPage } from "./ChainConnectionStatusPage";

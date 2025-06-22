@@ -4,24 +4,23 @@ import { ChainIdentifier } from "../../entities/chain/ui/chain-identifier";
 import { BasicChainType } from "../../shared/types";
 import { ConnectionStatusBar } from "../../shared/ui/connection-status-bar";
 
-interface ChainConnectionDetailCardProps
-  extends HTMLAttributes<HTMLDivElement> {
+interface IBCConnectionStatusCardProps extends HTMLAttributes<HTMLDivElement> {
   status: "ACTIVE" | "WARNING" | "ERROR";
   currentChain: BasicChainType;
   peerChain: BasicChainType;
 }
 
 const STATUS_STYLES = {
-  ACTIVE: `bg-[#23c55e] shadow-[0_0_70px_30px_rgba(35,197,94,0.6)]`,
-  WARNING: `bg-[#eab308] shadow-[0_0_70px_30px_rgba(234,179,8,0.6)]`,
-  ERROR: `bg-[#ef4444] shadow-[0_0_70px_30px_rgba(239,68,68,0.6)]`,
+  ACTIVE: `bg-status-active shadow-[0_0_70px_30px_theme(colors.status.active.glow)]`,
+  WARNING: `bg-status-warning shadow-[0_0_70px_30px_theme(colors.status.warning.glow)]`,
+  ERROR: `bg-status-error shadow-[0_0_70px_30px_theme(colors.status.error.glow)]`,
 };
 
-export const ChainConnectionDetailCard = ({
+export const IBCConnectionStatusCard = ({
   status,
   currentChain,
   peerChain,
-}: ChainConnectionDetailCardProps) => {
+}: IBCConnectionStatusCardProps) => {
   return (
     <div className="relative flex flex-col items-start p-4 w-full rounded-lg bg-white shadow-[0px_0px_14px_0px_rgba(192,192,192,0.2)] overflow-hidden">
       <div

@@ -1,1 +1,0 @@
-export { ChainConnectionDetailCard } from "./ConnectionDetailCard";

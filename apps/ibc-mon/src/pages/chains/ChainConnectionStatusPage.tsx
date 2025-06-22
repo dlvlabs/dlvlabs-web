@@ -3,17 +3,17 @@ import { PageCard } from "@/shared/ui/page-card";
 import { ChainIdentifier } from "../../entities/chain/ui/chain-identifier";
 import { Divider } from "../../shared/ui/divider";
 import { DataFlowIcon } from "../../shared/ui/icons";
-import { ChainConnectionDetailCard } from "../../widgets/connection-detail-card";
+import { IBCConnectionStatusCard } from "../../widgets/ibc-connection-status-card";
 
-interface ChainConnectionDetailPageProps {
+interface ChainConnectionStatusPageProps {
   chainId: string;
   peerChainId: string;
 }
 
-export const ChainConnectionDetailPage = ({
+export const ChainConnectionStatusPage = ({
   chainId,
   peerChainId,
-}: ChainConnectionDetailPageProps) => {
+}: ChainConnectionStatusPageProps) => {
   const currentChain = CHAIN_LIST.find((chain) => chain.chainId === chainId);
   const peerChain = CHAIN_LIST.find((chain) => chain.chainId === peerChainId);
 
@@ -40,17 +40,17 @@ export const ChainConnectionDetailPage = ({
         <Divider />
         <div className="w-full min-h-[66vh] h-full px-4 py-5 border-b">
           <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-8">
-            <ChainConnectionDetailCard
+            <IBCConnectionStatusCard
               currentChain={currentChain}
               peerChain={peerChain}
               status="ACTIVE"
             />
-            <ChainConnectionDetailCard
+            <IBCConnectionStatusCard
               currentChain={currentChain}
               peerChain={peerChain}
               status="WARNING"
             />
-            <ChainConnectionDetailCard
+            <IBCConnectionStatusCard
               currentChain={currentChain}
               peerChain={peerChain}
               status="ERROR"

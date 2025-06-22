@@ -18,20 +18,20 @@ export const ConnectionStatusBar = ({
 
   const colorClasses = {
     line: isError
-      ? "bg-gradient-to-r from-rose-400 to-rose-600 shadow-rose-300/50"
+      ? "bg-gradient-to-r from-status-error-light to-status-error-darker shadow-status-error-light/50"
       : isWarning
-        ? "bg-gradient-to-r from-yellow-400 to-orange-500 shadow-yellow-300/60"
-        : "bg-gradient-to-r from-green-400 to-green-600 shadow-green-300/50",
+        ? "bg-gradient-to-r from-status-warning-light to-status-warning-orange shadow-status-warning-light/60"
+        : "bg-gradient-to-r from-status-active-light to-status-active-dark shadow-status-active-light/50",
     ping: isError
-      ? "bg-rose-500/80"
+      ? "bg-status-error-dark/80"
       : isWarning
-        ? "bg-yellow-500/70"
-        : "bg-green-500/80",
+        ? "bg-status-warning-dark/70"
+        : "bg-status-active-dark/80",
     circle: isError
-      ? "bg-rose-500 shadow-rose-400/50"
+      ? "bg-status-error-dark shadow-status-error-light/50"
       : isWarning
-        ? "bg-yellow-500 shadow-orange-400/60"
-        : "bg-green-500 shadow-green-400/50",
+        ? "bg-status-warning-dark shadow-status-warning-orange/60"
+        : "bg-status-active-dark shadow-status-active-light/50",
   };
 
   return (

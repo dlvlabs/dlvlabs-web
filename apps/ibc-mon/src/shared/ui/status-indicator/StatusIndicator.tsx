@@ -3,16 +3,16 @@ import { StatusType } from "../../types";
 
 const STATUS_INDICATOR_STYLES = {
   ACTIVE: {
-    ping: "bg-emerald-400 opacity-75",
-    dot: "bg-emerald-500",
+    ping: "bg-status-active-light opacity-75",
+    dot: "bg-status-active-dark",
   },
   WARNING: {
-    ping: "bg-amber-400 opacity-75",
-    dot: "bg-amber-500",
+    ping: "bg-status-warning-light opacity-75",
+    dot: "bg-status-warning-dark",
   },
   ERROR: {
-    ping: "bg-rose-400 opacity-75",
-    dot: "bg-rose-500",
+    ping: "bg-status-error-light opacity-75",
+    dot: "bg-status-error-dark",
   },
 };
 

@@ -4,8 +4,7 @@ import Link from "next/link";
 import { ChainIdentifier } from "../../entities/chain/ui/chain-identifier";
 import { NextIcon } from "../../shared/ui/icons";
 
-interface ConnectionCardProps {
-  chainName: string;
+interface ChainConnectionPreviewCardProps {
   logoUrl: string;
   chainId: string;
   connectionId: string;
@@ -13,14 +12,13 @@ interface ConnectionCardProps {
   status: StatusType;
 }
 
-export const ConnectionCard = ({
-  chainName,
+export const ChainConnectionPreviewCard = ({
   logoUrl,
   chainId,
   connectionId,
   connectionChainName,
   status,
-}: ConnectionCardProps) => {
+}: ChainConnectionPreviewCardProps) => {
   return (
     <Link href={`/chains/${chainId}/connections/${connectionId}`}>
       <div className="w-full font-[Arial] p-4 cursor-pointer rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 relative group">

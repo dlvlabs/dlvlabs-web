@@ -1,7 +1,7 @@
 import { BasicChainType, StatusType } from "@/shared/types";
 import { Divider } from "@/shared/ui/divider";
 import { PageCard } from "@/shared/ui/page-card";
-import { ConnectionCard } from "@/widgets/connection-card";
+import { IBCConnectionSummaryCard } from "@/widgets/chain-connection-preview-card";
 import { ChainIdentifier } from "../../entities/chain/ui/chain-identifier";
 
 const CONNECTED_CHAINS = [
@@ -25,7 +25,11 @@ const CONNECTED_CHAINS = [
   },
 ];
 
-export const ChainConnectionsPage = ({ chain }: { chain: BasicChainType }) => {
+export const ChainConnectionListPage = ({
+  chain,
+}: {
+  chain: BasicChainType;
+}) => {
   return (
     <div className="w-full h-full flex-1 flex flex-col items-center justify-center">
       <PageCard>
@@ -55,7 +59,7 @@ export const ChainConnectionsPage = ({ chain }: { chain: BasicChainType }) => {
         <div className="w-full min-h-[66vh] h-full px-12 py-5 border-b">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {CONNECTED_CHAINS.map((connectedChain) => (
-              <ConnectionCard
+              <IBCConnectionSummaryCard
                 key={connectedChain.chainId}
                 chainName={chain.name}
                 logoUrl={connectedChain.logo}
