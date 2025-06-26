@@ -1,4 +1,4 @@
-import { ChainConnectionDetailPage } from "@/pages/chains";
+import { ChainConnectionStatusPage } from "@/pages/chain";
 import { redirect } from "next/navigation";
 
 export default async function Page({
@@ -12,6 +12,6 @@ export default async function Page({
     redirect("/notfound");
   }
   return (
-    <ChainConnectionDetailPage chainId={chainId} peerChainId={peerChainId} />
+    <ChainConnectionStatusPage chainId={chainId} peerChainId={peerChainId} />
   );
 }

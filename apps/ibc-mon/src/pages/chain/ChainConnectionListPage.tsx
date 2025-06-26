@@ -1,7 +1,7 @@
 import { BasicChainType, StatusType } from "@/shared/types";
 import { Divider } from "@/shared/ui/divider";
 import { PageCard } from "@/shared/ui/page-card";
-import { IBCConnectionSummaryCard } from "@/widgets/chain-connection-preview-card";
+import { ChainConnectionPreviewCard } from "@/widgets/chain-connection-preview-card";
 import { ChainIdentifier } from "../../entities/chain/ui/chain-identifier";
 
 const CONNECTED_CHAINS = [
@@ -39,29 +39,17 @@ export const ChainConnectionListPage = ({
             logoUrl={chain.logo}
             chainId={chain.chainId}
           />
-          {/* <div className="flex items-center gap-2 py-2">
-            <Image
-              src={chain.logo}
-              alt={chain.name}
-              width={24}
-              height={24}
-              className="rounded-full"
-            />
-            <h3 className="text-xl leading-6 font-medium text-gray-900">
-              {formatChainName(chain.name)}
-            </h3>
-          </div> */}
+
           <p className=" max-w-2xl text-sm text-gray-500">
             Total Connected Chains: {CONNECTED_CHAINS.length}
           </p>
         </div>
         <Divider />
-        <div className="w-full min-h-[66vh] h-full px-12 py-5 border-b">
+        <div className="w-full min-h-[66vh] h-full px-4 py-5 border-b">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {CONNECTED_CHAINS.map((connectedChain) => (
-              <IBCConnectionSummaryCard
+              <ChainConnectionPreviewCard
                 key={connectedChain.chainId}
-                chainName={chain.name}
                 logoUrl={connectedChain.logo}
                 chainId={chain.chainId}
                 connectionChainName={connectedChain.name}

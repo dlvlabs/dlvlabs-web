@@ -1,4 +1,4 @@
-import { ChainConnectionsPage } from "@/pages/chains";
+import { ChainConnectionListPage } from "@/pages/chain";
 import { CHAIN_LIST } from "@/shared/consts";
 import { redirect } from "next/navigation";
 
@@ -13,5 +13,5 @@ export default async function Page({
   if (!currentChain) {
     redirect("/notfound");
   }
-  return <ChainConnectionsPage chain={currentChain} />;
+  return <ChainConnectionListPage chain={currentChain} />;
 }

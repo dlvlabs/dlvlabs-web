@@ -1,5 +1,5 @@
 import { tcm } from "@dlvlabs/ui";
-import { HTMLAttributes } from "react";
+import { Fragment, HTMLAttributes } from "react";
 import { ChainIdentifier } from "../../entities/chain/ui/chain-identifier";
 import { BasicChainType } from "../../shared/types";
 import { ConnectionStatusBar } from "../../shared/ui/connection-status-bar";
@@ -75,10 +75,14 @@ export const IBCConnectionStatusCard = ({
               <td className="py-3 pl-4 text-[#7e8882]">{status}</td>
             </tr>
             <tr>
-              <td className="py-3 pr-8 font-medium text-gray-700 whitespace-nowrap align-top">
-                Reason
-              </td>
-              <td className="py-3 pl-4 text-[#7e8882]">Reason texts</td>
+              {status !== "ACTIVE" && (
+                <Fragment>
+                  <td className="py-3 pr-8 font-medium text-gray-700 whitespace-nowrap align-top">
+                    Reason
+                  </td>
+                  <td className="py-3 pl-4 text-[#7e8882]">Reason texts</td>
+                </Fragment>
+              )}
             </tr>
           </tbody>
         </table>
