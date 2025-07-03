@@ -1,3 +1,4 @@
+import { Clipboard } from "@/shared/ui/icons";
 import { tcm } from "@dlvlabs/ui";
 import { Fragment, HTMLAttributes } from "react";
 import { ChainIdentifier } from "../../entities/chain/ui/chain-identifier";
@@ -48,25 +49,50 @@ export const IBCConnectionStatusCard = ({
       </div>
 
       <div className="mt-3 w-full overflow-hidden text-sm">
-        <table className="min-w-full table-fixed">
+        <table className="w-full table-fixed px-2">
           <tbody>
             <tr className="border-b border-gray-100">
               <td className="py-3 pr-8 font-medium text-gray-700 whitespace-nowrap w-2/5">
-                Channel Name
+                Client ID
               </td>
-              <td className="py-3 pl-4 text-[#7e8882]">Channel-1</td>
+              <td className="py-3 pl-4 text-[#7e8882]">Client ID</td>
             </tr>
             <tr className="border-b border-gray-100">
               <td className="py-3 pr-8 font-medium text-gray-700 whitespace-nowrap">
-                Untreated Transaction
+                Connection ID
               </td>
-              <td className="py-3 pl-4 text-[#7e8882]">1</td>
+              <td className="py-3 pl-4 text-[#7e8882]">Connection ID</td>
             </tr>
             <tr className="border-b border-gray-100">
               <td className="py-3 pr-8 font-medium text-gray-700 whitespace-nowrap">
-                Timeout Transaction
+                Channel ID
               </td>
-              <td className="py-3 pl-4 text-[#7e8882]">1</td>
+              <td className="py-3 pl-4 text-[#7e8882]">Channel ID</td>
+            </tr>
+            <tr className="border-b border-gray-100">
+              <td className="py-3 pr-8 font-medium text-gray-700 whitespace-nowrap">
+                Port ID
+              </td>
+              <td className="py-3 pl-4 text-[#7e8882]">Port ID</td>
+            </tr>
+            <tr className="border-b border-gray-100">
+              <td className="py-3 pr-8 font-medium text-gray-700 whitespace-nowrap">
+                Sequence
+              </td>
+              <td className="py-3 pl-4 text-[#7e8882]">Sequence</td>
+            </tr>
+            <tr className="border-b border-gray-100">
+              <td className="py-3 pr-8 font-medium text-gray-700 whitespace-nowrap">
+                Latest IBC Transaction
+              </td>
+              <td className="w-full py-3 pl-4 text-[#7e8882] flex items-center space-x-2">
+                <div
+                  className="w-full  truncate overflow-hidden whitespace-nowrap"
+                  title="5AA7D65A234AE2B5609AB3FD920D38493968BBCB99492CDA3040BC58DA651820">
+                  5AA7D65A234AE2B5609AB3FD920D38493968BBCB99492CDA3040BC58DA651820
+                </div>
+                <Clipboard className="cursor-pointer" />
+              </td>
             </tr>
             <tr className="border-b border-gray-100">
               <td className="py-3 pr-8 font-medium text-gray-700 whitespace-nowrap">
@@ -78,9 +104,9 @@ export const IBCConnectionStatusCard = ({
               {status !== "ACTIVE" && (
                 <Fragment>
                   <td className="py-3 pr-8 font-medium text-gray-700 whitespace-nowrap align-top">
-                    Reason
+                    Problem
                   </td>
-                  <td className="py-3 pl-4 text-[#7e8882]">Reason texts</td>
+                  <td className="py-3 pl-4 text-[#7e8882]">Problem texts</td>
                 </Fragment>
               )}
             </tr>

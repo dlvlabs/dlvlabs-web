@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   description:
     "Real-time IBC channel monitoring solution for tracking channel activities, transactions, and timeout events across the Cosmos ecosystem",
 };
-
 export function RootLayout({
   children,
 }: Readonly<{
