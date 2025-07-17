@@ -1,1 +1,1 @@
-export * from "./next-theme";
+export { TanstackQueryProvider } from "./tanstack-query";
