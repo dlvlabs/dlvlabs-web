@@ -5881,6 +5881,7 @@ __metadata:
   resolution: "web@workspace:apps/web"
   dependencies:
     "@dlvlabs/eslint-config": "npm:*"
+    "@dlvlabs/tailwind-config": "npm:*"
     "@dlvlabs/typescript-config": "npm:*"
     "@dlvlabs/ui": "npm:*"
     "@types/node": "npm:^22.14.0"
@@ -5888,8 +5889,10 @@ __metadata:
     "@types/react-dom": "npm:19.1.1"
     eslint: "npm:^9.25.0"
     next: "npm:^15.3.0"
+    postcss: "npm:^8.4.27"
     react: "npm:^19.1.0"
     react-dom: "npm:^19.1.0"
+    tailwindcss: "npm:^3.3.0"
     typescript: "npm:5.8.2"
   languageName: unknown
   linkType: soft
