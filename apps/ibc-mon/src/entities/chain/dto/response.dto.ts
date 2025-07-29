@@ -1,3 +1,5 @@
 import { ChainEntity } from "../types";
 
-export type GetAllChainResponse = Omit<ChainEntity, "counterparties">;
+export type GetAllChainResponse = Array<Omit<ChainEntity, "counterparties">>;
+
+export type GetChainDetailResponse = ChainEntity;

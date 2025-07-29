@@ -7,6 +7,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["IBM Plex Sans", "sans-serif"],
+      },
       colors: {
         status: {
           active: {
