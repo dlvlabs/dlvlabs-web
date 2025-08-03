@@ -1,8 +1,7 @@
+import { ChainIdentifier } from "@/entities/chain";
 import { BasicChainType, StatusType } from "@/shared/types";
-import { Divider } from "@/shared/ui/divider";
-import { PageCard } from "@/shared/ui/page-card";
-import { ChainConnectionPreviewCard } from "@/widgets/chain-connection-preview-card";
-import { ChainIdentifier } from "../../entities/chain/ui/chain-identifier";
+import { Divider, PageCard } from "@/shared/ui";
+import { ChainConnectionPreviewCard } from "@/widgets/chain";
 
 const CONNECTED_CHAINS = [
   {

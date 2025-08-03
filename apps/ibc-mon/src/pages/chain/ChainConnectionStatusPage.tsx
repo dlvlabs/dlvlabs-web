@@ -1,9 +1,9 @@
+import { ChainIdentifier } from "@/entities/chain";
 import { CHAIN_LIST } from "@/shared/consts";
+import { Divider } from "@/shared/ui";
+import { DataFlowIcon } from "@/shared/ui/icons";
 import { PageCard } from "@/shared/ui/page-card";
-import { ChainIdentifier } from "../../entities/chain/ui/chain-identifier";
-import { Divider } from "../../shared/ui/divider";
-import { DataFlowIcon } from "../../shared/ui/icons";
-import { IBCConnectionStatusCard } from "../../widgets/ibc-connection-status-card";
+import { IBCConnectionStatusCard } from "@/widgets/chain";
 
 interface ChainConnectionStatusPageProps {
   chainId: string;

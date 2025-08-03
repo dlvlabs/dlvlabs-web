@@ -1,6 +1,5 @@
 export type {
+  ChainCounterparty,
   ChainEntity,
   ChannelChainEntity,
-  ConnectionChainEntity,
-  CounterpartyChainEntity,
 } from "./chain.types";

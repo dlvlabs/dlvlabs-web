@@ -1,1 +1,1 @@
-export { ChainAdapter } from "./chain.api";
+export { ChainAdapter } from "./chain.adapter";

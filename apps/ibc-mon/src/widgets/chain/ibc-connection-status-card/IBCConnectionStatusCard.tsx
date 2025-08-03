@@ -1,9 +1,9 @@
+import { ChainIdentifier } from "@/entities/chain";
+import { BasicChainType } from "@/shared/types";
+import { ConnectionStatusBar } from "@/shared/ui";
 import { Clipboard } from "@/shared/ui/icons";
 import { tcm } from "@dlvlabs/ui";
 import { Fragment, HTMLAttributes } from "react";
-import { ChainIdentifier } from "../../entities/chain/ui/chain-identifier";
-import { BasicChainType } from "../../shared/types";
-import { ConnectionStatusBar } from "../../shared/ui/connection-status-bar";
 
 interface IBCConnectionStatusCardProps extends HTMLAttributes<HTMLDivElement> {
   status: "ACTIVE" | "WARNING" | "ERROR";

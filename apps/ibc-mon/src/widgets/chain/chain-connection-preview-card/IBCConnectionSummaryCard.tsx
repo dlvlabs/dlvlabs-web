@@ -1,8 +1,8 @@
 import { StatusType } from "@/shared/types";
 import { StatusIndicator } from "@/shared/ui/status-indicator";
 import Link from "next/link";
-import { ChainIdentifier } from "../../entities/chain/ui/chain-identifier";
-import { NextIcon } from "../../shared/ui/icons";
+import { ChainIdentifier } from "../../../entities/chain/ui/chain-identifier";
+import { NextIcon } from "../../../shared/ui/icons";
 
 interface ChainConnectionPreviewCardProps {
   logoUrl: string;

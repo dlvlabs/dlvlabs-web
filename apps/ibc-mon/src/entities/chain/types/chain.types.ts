@@ -1,27 +1,27 @@
 import { StatusType } from "@/shared/types";
 
-export interface ChainEntity {
+export type ChainEntity = {
   chainName: string;
   logoUrl: string;
   chainId: string;
-  counterparties?: CounterpartyChainEntity[] | null;
-}
+};
 
-export interface CounterpartyChainEntity
-  extends Omit<ChainEntity, "counterparties"> {
-  clientId: string;
-  status: StatusType | null;
-  connections?: ConnectionChainEntity[];
-}
-export interface ConnectionChainEntity {
-  connectionId: string;
-  channels: ChannelChainEntity[];
-}
-
-export interface ChannelChainEntity {
+export type ChannelChainEntity = {
   channelId: string;
-  sequence: number;
+  status: StatusType;
   problem: string;
+  sequence: number;
   latestIBCTx: string;
-  status: StatusType | null;
-}
+};
+
+export type ChainCounterparty = {
+  status: StatusType;
+  chainName: string;
+  chainId: string;
+  clientId: string;
+  logoUrl: string;
+  connections: Array<{
+    connectionId: string;
+    channels: ChannelChainEntity[];
+  }>;
+};
