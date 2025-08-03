@@ -1,4 +1,4 @@
-import { ChainIdentifier } from "@/entities/chain/ui/chain-identifier";
+import { ChainIdentifier } from "@/entities/chain";
 import { InteractiveCard } from "@/shared/ui/interactive-card";
 import { tcm } from "@dlvlabs/ui";
 import Link from "next/link";

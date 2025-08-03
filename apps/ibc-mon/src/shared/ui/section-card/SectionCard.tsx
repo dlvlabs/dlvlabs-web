@@ -1,6 +1,6 @@
 import { tcm } from "@dlvlabs/ui";
 
-export const PageCard = ({
+export const SectionCard = ({
   children,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => {

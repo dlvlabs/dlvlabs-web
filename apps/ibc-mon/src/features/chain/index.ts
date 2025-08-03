@@ -1,2 +1,6 @@
 export { useChainList } from "./hooks";
-export { ChainNavigationCard } from "./ui/chain-navigation-card";
+export {
+  ChainConnectionPreviewCard,
+  ChainNavigationCard,
+  IBCConnectionStatusCard,
+} from "./ui";

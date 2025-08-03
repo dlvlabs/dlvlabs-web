@@ -1,9 +1,8 @@
 import { ChainIdentifier } from "@/entities/chain";
+import { IBCConnectionStatusCard } from "@/features/chain";
 import { CHAIN_LIST } from "@/shared/consts";
-import { Divider } from "@/shared/ui";
+import { Divider, SectionCard } from "@/shared/ui";
 import { DataFlowIcon } from "@/shared/ui/icons";
-import { PageCard } from "@/shared/ui/page-card";
-import { IBCConnectionStatusCard } from "@/widgets/chain";
 
 interface ChainConnectionStatusPageProps {
   chainId: string;
@@ -23,7 +22,7 @@ export const ChainConnectionStatusPage = ({
 
   return (
     <div className="w-full h-full flex-1 flex flex-col items-center justify-center py-12 mx-auto">
-      <PageCard>
+      <SectionCard>
         <div className="w-full px-6 py-3 flex items-center gap-x-4">
           <ChainIdentifier
             chainName={currentChain.name}
@@ -57,7 +56,7 @@ export const ChainConnectionStatusPage = ({
             />
           </div>
         </div>
-      </PageCard>
+      </SectionCard>
     </div>
   );
 };
