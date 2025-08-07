@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { ChainService } from "../service";
+import { chainService } from "../service";
 
 export const useChainList = () => {
   return useQuery({
     queryKey: ["chain-list"],
-    queryFn: () => ChainService().getChainList(),
+    queryFn: () => chainService.getList(),
   });
 };

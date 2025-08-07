@@ -1,4 +1,4 @@
-export { useChainList } from "./hooks";
+export { useChainList, useConnectionChains } from "./hooks";
 export {
   ChainConnectionPreviewCard,
   ChainNavigationCard,

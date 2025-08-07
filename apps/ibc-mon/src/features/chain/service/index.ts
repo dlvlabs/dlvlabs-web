@@ -1,1 +1,3 @@
-export { ChainService } from "./chain.service";
+import { createChainService } from "./chain.service.factory";
+
+export const chainService = createChainService();

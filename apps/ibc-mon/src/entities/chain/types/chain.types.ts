@@ -14,6 +14,8 @@ export type ChannelChainEntity = {
   latestIBCTx: string;
 };
 
+export type ConnectionChainEntity = Omit<ChainCounterparty, "connections">;
+
 export type ChainCounterparty = {
   status: StatusType;
   chainName: string;

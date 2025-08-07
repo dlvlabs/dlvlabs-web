@@ -1,8 +1,29 @@
-import { DUMMY_CHAIN_LIST } from "@/entities/chain";
+import { ChainAdapter } from "@/entities/chain/api/chain.adapter";
+import { ChainEntity } from "@/entities/chain/types";
 import { ChainUseCase } from "../usecase";
 
-export const ChainService = (): ChainUseCase => ({
-  getChainList: async () => {
-    return DUMMY_CHAIN_LIST;
+export const ChainService = (
+  chaiAdapter: ReturnType<typeof ChainAdapter>
+): ChainUseCase => ({
+  getInformation: async (chainId: string) => {
+    try {
+      return (await chaiAdapter.getChainInformation(
+        chainId
+      )) as unknown as ChainEntity;
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  },
+  getList: async () => {
+    return await chaiAdapter.getList();
+  },
+  getCounterpartyList: async (chainId: string) => {
+    try {
+      return await chaiAdapter.getCounterpartyList(chainId);
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
   },
 });
