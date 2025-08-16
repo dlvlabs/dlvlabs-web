@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { Header } from "@dlvlabs/ui";
+import { CommonLayout } from "@dlvlabs/ui";
 
 import { TanstackQueryProvider } from "@/app/providers";
 import { IBM_Plex_Sans } from "next/font/google";
@@ -33,12 +33,7 @@ export function RootLayout({
       <body>
         <main>
           <TanstackQueryProvider>
-            <div className="min-w-screen min-h-screen flex flex-col items-center justify-center">
-              <Header />
-              <div className="flex-1 flex flex-col items-center justify-center pt-28">
-                {children}
-              </div>
-            </div>
+            <CommonLayout>{children}</CommonLayout>
           </TanstackQueryProvider>
         </main>
       </body>
