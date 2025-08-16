@@ -1,9 +1,9 @@
 "use client";
-import { ChainNavigationCard, useChainList } from "@/features/chain";
+import { ChainNavigationCard, useGetChainList } from "@/features/chain";
 import { tcm } from "@dlvlabs/ui";
 
 export const HomeChainListSection = () => {
-  const { data, isLoading, isFetching } = useChainList();
+  const { data, isLoading, isFetching } = useGetChainList();
 
   const isTransitioning = isLoading || isFetching;
 

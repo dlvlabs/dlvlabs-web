@@ -6,24 +6,24 @@ export type ChainEntity = {
   chainId: string;
 };
 
-export type ChannelChainEntity = {
-  channelId: string;
+export type ConnectionChainEntity = Omit<ChainCounterparty, "connections"> & {
   status: StatusType;
-  problem: string;
-  sequence: number;
-  latestIBCTx: string;
 };
 
-export type ConnectionChainEntity = Omit<ChainCounterparty, "connections">;
-
 export type ChainCounterparty = {
-  status: StatusType;
   chainName: string;
   chainId: string;
   clientId: string;
   logoUrl: string;
-  connections: Array<{
-    connectionId: string;
-    channels: ChannelChainEntity[];
-  }>;
+  connections: Array<ChainConnection>;
+};
+
+export type ChainConnection = {
+  connectionId: string;
+  channelId: string;
+  status: StatusType;
+  problem: string;
+  sequence: number;
+  portId: string;
+  latestIBCTx: string;
 };

@@ -4,7 +4,7 @@ import { Divider, SectionCard } from "@/shared/ui";
 import { ChainIdentifier } from "@/entities/chain";
 import {
   ChainConnectionPreviewCard,
-  useConnectionChains,
+  useGetConnectionChains,
 } from "@/features/chain";
 
 interface ConnectionListSectionProps {
@@ -15,7 +15,7 @@ export const ConnectionListSection = ({
   chainId,
 }: ConnectionListSectionProps) => {
   const { connectionChains, chainInfo, isLoading } =
-    useConnectionChains(chainId);
+    useGetConnectionChains(chainId);
 
   if (isLoading || !chainInfo) {
     return (
@@ -51,6 +51,8 @@ export const ConnectionListSection = ({
               connectionChainName={connectionChain.chainName}
               connectionId={connectionChain.clientId}
               status={connectionChain.status}
+              baseChainId={chainInfo.chainId}
+              clientId={connectionChain.clientId}
             />
           ))}
         </div>

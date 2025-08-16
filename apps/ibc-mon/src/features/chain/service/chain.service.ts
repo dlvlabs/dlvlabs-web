@@ -26,4 +26,12 @@ export const ChainService = (
       throw error;
     }
   },
+  getCounterpartyDetail: async (chainId: string, clientId: string) => {
+    try {
+      return await chaiAdapter.getCounterpartyDetail(chainId, clientId);
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
+  },
 });

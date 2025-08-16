@@ -1,4 +1,5 @@
 export type {
+  ChainConnection,
   ChainCounterparty,
   ChainEntity,
   ChannelChainEntity,

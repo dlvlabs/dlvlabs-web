@@ -10,17 +10,20 @@ interface ChainConnectionPreviewCardProps {
   connectionId: string;
   connectionChainName: string;
   status: StatusType;
+  baseChainId: string;
+  clientId: string;
 }
 
 export const ChainConnectionPreviewCard = ({
   logoUrl,
-  chainId,
   connectionId,
   connectionChainName,
   status,
+  baseChainId,
+  clientId,
 }: ChainConnectionPreviewCardProps) => {
   return (
-    <Link href={`/chains/${chainId}/connections/${connectionId}`}>
+    <Link href={`/chains/${baseChainId}/connections/${clientId}`}>
       <div className="w-full font-[Arial] p-4 cursor-pointer rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow duration-300 relative group">
         <StatusIndicator status={status} />
 

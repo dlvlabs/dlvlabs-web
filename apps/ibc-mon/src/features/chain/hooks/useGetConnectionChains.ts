@@ -2,7 +2,7 @@ import { ChainEntity } from "@/entities/chain/types";
 import { chainService } from "@/features/chain/service";
 import { useQueries } from "@tanstack/react-query";
 
-export const useConnectionChains = (chainId: string) => {
+export const useGetConnectionChains = (chainId: string) => {
   const [
     { data: connectionChains, isLoading: connectionChainsLoading },
     { data: chainInfo, isLoading: chainInfoLoading },

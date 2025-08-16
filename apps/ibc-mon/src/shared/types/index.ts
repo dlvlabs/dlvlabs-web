@@ -1,3 +1,2 @@
-export * from "./api.types";
-export * from "./chain.types";
-export * from "./status.types";
+export { type ApiResponse } from "./api.types";
+export { type StatusType } from "./status.types";

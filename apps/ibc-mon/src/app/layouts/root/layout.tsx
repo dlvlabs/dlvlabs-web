@@ -35,7 +35,7 @@ export function RootLayout({
           <TanstackQueryProvider>
             <div className="min-w-screen min-h-screen flex flex-col items-center justify-center">
               <Header />
-              <div className="flex-1 flex flex-col items-center justify-center">
+              <div className="flex-1 flex flex-col items-center justify-center pt-28">
                 {children}
               </div>
             </div>

@@ -1,5 +1,6 @@
 import {
   DUMMY_CHAIN_LIST,
+  DUMMY_CONNECTION_CHAIN_DETAIL,
   DUMMY_CONNECTION_CHAIN_LIST,
 } from "@/entities/chain/const/dummy.const";
 import {
@@ -27,7 +28,6 @@ export const ChainAdapter = () => ({
     return response.data;
   },
   getCounterpartyList: async (chainId: string) => {
-    console.log("adapter chainId", chainId);
     return DUMMY_CONNECTION_CHAIN_LIST;
     const response = await apiClient.get<GetCounterpartyListResponse>(
       `/chains/${chainId}/counterparties`
@@ -35,6 +35,7 @@ export const ChainAdapter = () => ({
     return response.data;
   },
   getCounterpartyDetail: async (chainId: string, clientId: string) => {
+    return DUMMY_CONNECTION_CHAIN_DETAIL;
     const response = await apiClient.get<GetCounterpartyDetailResponse>(
       `/chains/${chainId}/counterparties/${clientId}`
     );
