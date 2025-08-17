@@ -1,4 +1,4 @@
-import { Header } from "../../organisms";
+import { Footer, Header } from "../../organisms";
 
 interface CommonLayoutProps {
   children: React.ReactNode;
@@ -6,11 +6,14 @@ interface CommonLayoutProps {
 
 export const CommonLayout = ({ children }: CommonLayoutProps) => {
   return (
-    <div className="min-w-screen min-h-screen flex flex-col items-center justify-center mx-auto">
-      <Header />
-      <div className="flex-1 flex flex-col items-center justify-center pt-28 md:px-16 lg:px-24 xl:px-32">
-        {children}
+    <>
+      <div className="min-w-screen min-h-screen flex flex-col items-center justify-center mx-auto">
+        <Header />
+        <div className="flex-1 flex flex-col items-center justify-center pt-28 md:px-16 lg:px-24 xl:px-32">
+          {children}
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
