@@ -45,7 +45,7 @@ export const Header = ({ activePath = "/" }: HeaderProps) => {
           <div
             className={`flex items-center gap-2 ${isScrolled ? "ml-4 sm:ml-6 md:ml-8" : ""}`}>
             <a
-              className="text-xl sm:text-2xl font-semibold text-slate-700 "
+              className="text-xl md:text-2xl font-semibold text-slate-700 [text-shadow:0px_1px_2px_rgba(0,0,0,0.15),0px_2px_5px_rgba(0,0,0,0.1)]"
               href="/">
               DLV Labs
             </a>
