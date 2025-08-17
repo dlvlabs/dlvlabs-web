@@ -33,7 +33,9 @@ export function RootLayout({
       <body>
         <main>
           <TanstackQueryProvider>
-            <CommonLayout>{children}</CommonLayout>
+            <CommonLayout className="items-center justify-center pt-28 md:px-16 lg:px-24 xl:px-32">
+              {children}
+            </CommonLayout>
           </TanstackQueryProvider>
         </main>
       </body>

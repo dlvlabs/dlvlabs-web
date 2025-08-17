@@ -1,15 +1,21 @@
+import { tcm } from "../../../libs";
 import { Footer, Header } from "../../organisms";
 
-interface CommonLayoutProps {
+interface CommonLayoutProps
+  extends React.PropsWithoutRef<React.PropsWithChildren> {
+  className?: string;
   children: React.ReactNode;
 }
 
-export const CommonLayout = ({ children }: CommonLayoutProps) => {
+export const CommonLayout = ({ children, className }: CommonLayoutProps) => {
   return (
     <>
-      <div className="min-w-screen min-h-screen flex flex-col items-center justify-center mx-auto">
+      <div
+        className={
+          "min-w-screen min-h-screen flex flex-col items-center justify-center mx-auto"
+        }>
         <Header />
-        <div className="flex-1 flex flex-col items-center justify-center pt-28 md:px-16 lg:px-24 xl:px-32">
+        <div className={tcm("flex-1 flex flex-col w-full", className)}>
           {children}
         </div>
       </div>

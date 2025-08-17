@@ -1,4 +1,4 @@
-import { Header } from "@dlvlabs/ui";
+import { CommonLayout } from "@dlvlabs/ui";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -26,12 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <main>
-          <div className="min-w-screen min-h-screen flex flex-col items-center justify-center">
-            <Header />
-            <div className="flex-1 flex flex-col items-center justify-center">
-              {children}
-            </div>
-          </div>
+          <CommonLayout>{children}</CommonLayout>
         </main>
       </body>
     </html>
