@@ -4,5 +4,6 @@ export * from "./code";
 export * from "./libs";
 export * from "./ui/atoms";
 export * from "./ui/organisms";
+export * from "./ui/pages";
 export * from "./ui/templates";
 import "./styles.css";
