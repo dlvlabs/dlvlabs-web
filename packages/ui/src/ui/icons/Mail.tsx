@@ -9,6 +9,7 @@ export const Mail: React.FC<React.SVGAttributes<SVGSVGElement>> = ({
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 128 96"
       id="email"
+      fill="currentColor"
       className={tcm("w-5 h-5 cursor-pointer", className)}
       {...props}>
       <g id="Layer_2">

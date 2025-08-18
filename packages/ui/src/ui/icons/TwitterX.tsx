@@ -11,6 +11,7 @@ export const TwitterX: React.FC<React.SVGAttributes<SVGSVGElement>> = ({
       y="0px"
       width="100"
       height="100"
+      fill="currentColor"
       className={tcm("w-6 h-6 cursor-pointer", className)}
       {...props}
       viewBox="0 0 30 30">
