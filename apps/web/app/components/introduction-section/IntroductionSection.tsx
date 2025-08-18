@@ -3,7 +3,7 @@ import { Spotlight } from "./Spotlight";
 
 export const IntroductionSection = () => {
   return (
-    <div className="relative flex h-[50rem] w-full overflow-hidden bg-black/[0.96] antialiased md:items-center md:justify-center">
+    <div className="relative flex h-[50rem] w-full overflow-hidden  antialiased md:items-center md:justify-center">
       <div
         className={tcm(
           "pointer-events-none absolute inset-0 [background-size:40px_40px] select-none",

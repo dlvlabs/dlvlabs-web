@@ -9,7 +9,7 @@ import {
 
 export const Footer = () => {
   return (
-    <footer className="bg-card dark:bg-slate-900/20 mt-auto w-full">
+    <footer className="bg-card  mt-auto w-full">
       <div className="max-w-6xl border-t border-border dark:border-slate-700/30 mx-auto px-6 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Company Information */}
