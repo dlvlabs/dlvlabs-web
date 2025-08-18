@@ -9,17 +9,14 @@ interface CommonLayoutProps
 
 export const CommonLayout = ({ children, className }: CommonLayoutProps) => {
   return (
-    <>
-      <div
-        className={
-          "min-w-screen min-h-screen flex flex-col items-center justify-center mx-auto"
-        }>
+    <div className="relative w-full min-h-screen flex flex-col">
+      <div className="flex-1 flex flex-col items-center justify-center mx-auto">
         <Header />
-        <div className={tcm("flex-1 flex flex-col w-full", className)}>
+        <div className={tcm("relative flex-1 flex flex-col w-full", className)}>
           {children}
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </>
+    </div>
   );
 };
