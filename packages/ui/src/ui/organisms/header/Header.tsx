@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { NavigationLink } from "../../atoms";
+import { Close, Menu } from "../../icons";
 import { NAVIGATION_MENUS } from "./navigation.const";
 
 export interface HeaderProps {
@@ -39,7 +40,7 @@ export const Header = ({ activePath = "/" }: HeaderProps) => {
         <div
           className={`w-full py-6 flex items-center justify-between transition-all duration-300 ${
             isScrolled
-              ? "rounded-none backdrop-blur-xl bg-white/30 dark:bg-slate-900/50 shadow-md border-b border-white/10"
+              ? "rounded-none backdrop-blur-xl bg-white/30 dark:bg-transparent shadow-md border-b border-white/10"
               : "max-w-[calc(100%-2rem)] sm:max-w-[calc(100%-3rem)] md:max-w-[calc(100%-4rem)] rounded-full backdrop-blur-xl bg-white/20 dark:bg-transparent border border-white/30 dark:border-white/10 shadow-lg my-4 mx-4 sm:mx-6 md:mx-8 px-6 sm:px-8"
           }`}>
           <div
@@ -67,35 +68,7 @@ export const Header = ({ activePath = "/" }: HeaderProps) => {
             className={`md:hidden text-slate-700 dark:text-slate-200 focus:outline-none ${isScrolled ? "mr-4 sm:mr-6 md:mr-8" : ""}`}
             onClick={toggleMenu}
             aria-label="Toggle menu">
-            {isMenuOpen ? (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            )}
+            {isMenuOpen ? <Close /> : <Menu />}
           </button>
         </div>
       </div>
