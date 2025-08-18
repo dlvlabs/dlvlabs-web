@@ -8,7 +8,7 @@ export const HomeChainListSection = () => {
   const isTransitioning = isLoading || isFetching;
 
   return (
-    <section className="w-full flex gap-20 relative overflow-hidden mx-auto">
+    <section className="w-full flex gap-20 relative overflow-hidden mx-auto md:px-32 lg:px-48 xl:px-64">
       <div
         className={tcm(
           "w-full mx-24 py-32 h-24 flex items-center justify-center gap-20 transition-all duration-700 ease-in-out",

@@ -29,7 +29,7 @@ export const ConnectionListSection = ({
 
   return (
     <SectionCard>
-      <div className="w-full px-8 py-3 flex justify-between items-end">
+      <div className="w-full px-8 py-3 flex justify-between items-end min-h-full">
         <ChainIdentifier
           chainName={chainInfo.chainName}
           logoUrl={chainInfo.logoUrl}

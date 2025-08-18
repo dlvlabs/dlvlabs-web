@@ -9,9 +9,9 @@ import {
 
 export const Footer = () => {
   return (
-    <footer className="bg-card  mt-auto w-full">
-      <div className="max-w-6xl border-t border-border dark:border-slate-700/30 mx-auto px-6 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <footer className="bg-card mt-auto w-full md:px-32 lg:px-48 xl:px-56">
+      <div className="w-full border-t border-border dark:border-slate-700/30 mx-auto px-12 lg:px-20 py-8 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
           {/* Company Information */}
           <div className="space-y-4">
             <h3 className="text-xl font-semibold text-slate-700 dark:text-slate-200 [text-shadow:0px_1px_2px_rgba(0,0,0,0.15),0px_2px_5px_rgba(0,0,0,0.1)]">

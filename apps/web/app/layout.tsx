@@ -33,7 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} bg-black/[0.96]`}>
         <main>
           <CommonLayout>
-            <div className="relative flex flex-col w-full overflow-hidden  antialiased md:items-center md:justify-center">
+            <div className="relative flex flex-col w-full overflow-hidden antialiased md:items-center md:justify-center">
               <div
                 className={tcm(
                   "pointer-events-none absolute inset-0 [background-size:40px_40px] select-none",
