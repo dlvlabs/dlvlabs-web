@@ -30,7 +30,7 @@ export function RootLayout({
 }>) {
   return (
     <html lang="en" className={ibmPlexSans.className}>
-      <body>
+      <body className="light">
         <main>
           <TanstackQueryProvider>
             <CommonLayout className="items-center justify-center pt-28 md:px-16 lg:px-24 xl:px-32">
