@@ -12,7 +12,7 @@ export const IntroductionSection = () => {
           DLV Labs
         </h1>
         <p className="mx-auto mt-4 max-w-xl text-center text-base font-normal text-neutral-300">
-          DLVlabs is a technical team with extensive experience in the Cosmos
+          DLVLabs is a technical team with extensive experience in the Cosmos
           SDK, CometBFT, and IBC, offering infrastructure solutions and
           development support for blockchain ecosystems.
         </p>
