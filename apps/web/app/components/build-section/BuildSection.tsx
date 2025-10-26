@@ -3,12 +3,17 @@
 import { Discord, Github, LinkedIn, Mail, TwitterX } from "@dlvlabs/ui";
 import { BuildCard } from "./BuildCard";
 
+// * Team 강점
 export function BuildSection() {
   return (
     <section>
-      <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-3xl font-bold text-transparent md:text-5xl">
-        What We&apos;re Building
+      <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-3xl font-bold text-transparent md:text-5xl py-2">
+        What Drives Us
       </h1>
+      <h3 className="bg-opacity-50 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-center text-xl font-normal text-transparent md:text-2xl py-2">
+        Building resilient infrastructure and software for the future of
+        interchain technology.
+      </h3>
       <ul className="py-10 px-32 grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
         <GridItem
           area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"

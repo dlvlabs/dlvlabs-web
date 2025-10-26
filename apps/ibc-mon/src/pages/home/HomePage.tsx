@@ -2,7 +2,7 @@ import { HomeChainListSection, IntroSection } from "@/widgets/home";
 
 export function HomePage() {
   return (
-    <div className="w-full h-full flex-1 flex flex-col items-center justify-center gap-12 mx-32">
+    <div className="relative min-w-screen w-full min-h-screen flex flex-col gap-y-36 pb-32">
       <IntroSection />
       <HomeChainListSection />
     </div>

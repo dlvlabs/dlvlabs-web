@@ -1,13 +1,16 @@
+import base from "@dlvlabs/tailwind-config";
 import type { Config } from "tailwindcss";
 
 export default {
+  ...base,
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
     "../../packages/ui/src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: ["class"],
   theme: {
+    ...base.theme,
     extend: {
+      ...base.theme?.extend,
       fontFamily: {
         sans: ["IBM Plex Sans", "sans-serif"],
       },
@@ -36,9 +39,11 @@ export default {
         },
       },
       animation: {
+        ...base.theme?.extend?.animation,
         "slow-ping": "slow-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite",
       },
       keyframes: {
+        ...base.theme?.extend?.keyframes,
         "slow-ping": {
           "0%": {
             transform: "scale(1)",
@@ -52,5 +57,4 @@ export default {
       },
     },
   },
-  plugins: [],
 } satisfies Config;

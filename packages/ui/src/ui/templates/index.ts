@@ -1,1 +1,1 @@
-export { CommonLayout } from "./layouts";
+export { CommonLayout, MainLayout } from "./layouts";

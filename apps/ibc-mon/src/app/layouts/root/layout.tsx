@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { CommonLayout } from "@dlvlabs/ui";
+import { CommonLayout, MainLayout } from "@dlvlabs/ui";
 
 import { TanstackQueryProvider } from "@/app/providers";
 import { IBM_Plex_Sans } from "next/font/google";
@@ -29,14 +29,12 @@ export function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={ibmPlexSans.className}>
-      <body className="light">
+    <html lang="en" className={`${ibmPlexSans.className} dark`}>
+      <body className="bg-black/[0.96]">
         <main>
           <TanstackQueryProvider>
-            <CommonLayout
-              activePath="/ibc-mon"
-              className="min-h-screen flex flex-col mx-auto items-center justify-center pt-28 md:px-16 lg:px-24 xl:px-32">
-              {children}
+            <CommonLayout activePath="/ibc-mon">
+              <MainLayout>{children}</MainLayout>
             </CommonLayout>
           </TanstackQueryProvider>
         </main>

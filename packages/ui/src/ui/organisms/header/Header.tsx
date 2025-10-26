@@ -41,7 +41,7 @@ export const Header = ({ activePath = "/" }: HeaderProps) => {
           className={`w-full py-6 flex items-center justify-between transition-all duration-300 ${
             isScrolled
               ? "rounded-none backdrop-blur-xl bg-white/30 dark:bg-transparent shadow-md border-b border-white/10"
-              : "max-w-[calc(100%-2rem)] sm:max-w-[calc(100%-3rem)] md:max-w-[calc(100%-4rem)] rounded-full backdrop-blur-xl bg-white/20 dark:bg-transparent border border-white/30 dark:border-white/10 shadow-lg my-4 mx-4 sm:mx-6 md:mx-8 px-6 sm:px-8"
+              : "max-w-[calc(100%-2rem)] sm:max-w-[calc(100%-3rem)] md:max-w-[calc(100%-4rem)] rounded-full backdrop-blur-xl bg-white/20 dark:bg-transparent border border-white/30 dark:border-white/10 shadow-lg my-4 mx-4 sm:mx-6 md:mx-8 px-6 sm:px-10"
           }`}>
           <div
             className={`flex items-center gap-2 ${isScrolled ? "ml-4 sm:ml-6 md:ml-8" : ""}`}>
