@@ -1,6 +1,5 @@
 import { ChainIdentifier } from "@/entities/chain";
-import { InteractiveCard } from "@/shared/ui/interactive-card";
-import { tcm } from "@dlvlabs/ui";
+import { SpotlightCard, tcm } from "@dlvlabs/ui";
 import Link from "next/link";
 interface ChainNavigationCardProps
   extends React.HTMLAttributes<HTMLAnchorElement> {
@@ -18,12 +17,12 @@ export const ChainNavigationCard = ({
   ...props
 }: ChainNavigationCardProps) => {
   return (
-    <InteractiveCard
-      className={tcm("w-full h-24", className)}
+    <SpotlightCard
+      className={tcm("h-20", className)}
       component={Link}
       href={`/chains/${chainId}`}
       {...props}>
       <ChainIdentifier chainName={chainName} logoUrl={logoUrl} />
-    </InteractiveCard>
+    </SpotlightCard>
   );
 };

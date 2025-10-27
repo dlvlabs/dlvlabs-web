@@ -8,17 +8,17 @@ export const HomeChainListSection = () => {
   const isTransitioning = isLoading || isFetching;
 
   return (
-    <section className="w-full flex gap-20 relative overflow-hidden md:px-16 lg:px-24 xl:px-32">
+    <section className="w-full relative z-10 md:px-16 lg:px-24 xl:px-32">
       <div
         className={tcm(
-          "w-full py-32 h-24 flex items-center justify-center gap-20 transition-all duration-700 ease-in-out",
+          "w-full py-16 px-32 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 transition-all duration-700 ease-in-out",
           isTransitioning
             ? "opacity-0 translate-y-2"
             : "opacity-100 translate-y-0"
         )}>
         {data?.map((chain) => (
           <ChainNavigationCard
-            className="w-full"
+            className="w-full relative z-20"
             chainId={chain.chainId}
             key={chain.chainId}
             chainName={chain.chainName}

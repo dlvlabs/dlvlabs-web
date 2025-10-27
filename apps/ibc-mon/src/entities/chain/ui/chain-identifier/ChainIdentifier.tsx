@@ -28,7 +28,7 @@ export const ChainIdentifier = ({
       <div className="flex flex-col">
         <h3
           className={tcm(
-            `text-gray-900 font-medium leading-6`,
+            `text-neutral-300 font-medium leading-6`,
             size === "S" ? "text-md" : "text-xl",
             textClassName
           )}>
@@ -38,7 +38,7 @@ export const ChainIdentifier = ({
             .join(" ")}
         </h3>
         {chainId && (
-          <p className="text-slate-600 text-xs">ChainId: {chainId}</p>
+          <p className="text-neutral-600 text-xs">ChainId: {chainId}</p>
         )}
       </div>
     </div>

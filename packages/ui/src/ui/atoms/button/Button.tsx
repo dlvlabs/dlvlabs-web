@@ -2,10 +2,10 @@ import * as React from "react";
 import { tcm } from "../../../libs";
 interface ButtonBaseProps<Component extends React.ElementType> {
   component?: Component;
-  fullWidth?: boolean;
+  isNonStylable?: boolean;
 }
 
-type ButtonProps<Component extends React.ElementType> =
+export type ButtonProps<Component extends React.ElementType> =
   ButtonBaseProps<Component> &
     Omit<
       React.ComponentPropsWithoutRef<Component>,
@@ -14,11 +14,10 @@ type ButtonProps<Component extends React.ElementType> =
 
 export const Button = <Component extends React.ElementType = "button">({
   component,
-  fullWidth,
-
   className,
   disabled,
   children,
+  isNonStylable,
   ...props
 }: ButtonProps<Component>) => {
   const baseStyle =
@@ -27,10 +26,10 @@ export const Button = <Component extends React.ElementType = "button">({
   return React.createElement(
     component ?? "button",
     {
-      className: tcm(baseStyle, fullWidth && "w-full", className),
+      className: tcm(isNonStylable ? "" : baseStyle, className),
       disabled: disabled,
       ...props,
     },
-    <>{children}</>,
+    <>{children}</>
   );
 };
